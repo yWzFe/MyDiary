@@ -3,239 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
+    <title>My Personal Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-  <style>
-    /* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-}
-
-/* Navbar */
-header {
-    background: #333;
-    padding: 15px 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/hero-bg.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero h2 {
-    font-size: 3em;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ff5722;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Services */
-#services {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.service-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.service {
-    background: #f4f4f4;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.service:hover {
-    transform: translateY(-10px);
-}
-
-/* Contact */
-#contact {
-    padding: 50px 20px;
-    text-align: center;
-    background: #333;
-    color: white;
-}
-
-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-form button {
-    padding: 10px 20px;
-    background: #ff5722;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background: #333;
-        width: 100%;
-        top: 60px;
-        left: 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-    });
-});
-
-  </script>
 </head>
 <body>
 
-    <!-- Navbar -->
     <header>
-        <nav>
-            <h1 class="logo">MyBrand</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-toggle">&#9776;</button>
-        </nav>
+        <h1>Welcome to My Blog</h1>
+        <p>Sharing my thoughts & reviews</p>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Welcome to My Modern Website</h2>
-        <p>We create amazing digital experiences.</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="thoughts.html">📜 My Thoughts</a></li>
+            <li><a href="reviews.html">🎬 Reviews</a></li>
+        </ul>
+    </nav>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-container">
-            <div class="service">
-                <h3>Web Development</h3>
-                <p>We build responsive, high-performance websites.</p>
-            </div>
-            <div class="service">
-                <h3>SEO Optimization</h3>
-                <p>Improve your search rankings and visibility.</p>
-            </div>
-            <div class="service">
-                <h3>Graphic Design</h3>
-                <p>Beautiful designs tailored to your brand.</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="category">
+            <h2>📜 My Thoughts</h2>
+            <p>Philosophy, reflections, and observations.</p>
+            <a href="thoughts.html" class="btn">Explore Thoughts</a>
+        </section>
 
-    <!-- Contact Form -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <section class="category">
+            <h2>🎬 Reviews</h2>
+            <p>Anime, songs, albums, books, movies, and series.</p>
+            <a href="reviews.html" class="btn">Explore Reviews</a>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 MyBrand. All Rights Reserved.</p>
+        <p>&copy; 2025 My Blog. All Rights Reserved.</p>
     </footer>
 
 </body>
